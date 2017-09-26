@@ -1,0 +1,30 @@
+<html>
+<body>
+    <a th:href="@{/orders}">Orders</a>
+    <a th:href="@{/products}">Products</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Symbol</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="order : ${orders}">
+                <td th:text="${order.date}"></td>
+                <td th:text="${order.symbol}"></td>
+                <td th:text="${order.quantity}"></td>
+                <td th:text="${order.price}"></td>
+                <td>
+                    <button>Replace</button>
+                    <button>Cancel</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

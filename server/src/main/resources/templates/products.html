@@ -13,7 +13,7 @@
         </thead>
         <tbody>
             <tr th:each="product : ${products}">
-                <td><a th:href="@{/order(symbol=product.symbol)}" th:text="${product.symbol}"></a></td>
+                <td><a th:href="@{/order(symbol=${product.symbol})}" th:text="${product.symbol}"></a></td>
                 <td th:text="${product.assetType}"></td>
                 <td th:text="${product.price}"></td>
             </tr>

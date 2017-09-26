@@ -1,0 +1,21 @@
+<html>
+<body>
+    <h1>Place order</h1>
+    Symbol: <span th:text="${product.symbol}"></span><br/>
+    Current market price: <span th:text="${product.price}"></span>
+
+    <form action="/order" th:object="${order}" method="POST" enctype="utf8">
+        <input type="hidden" th:field="*{symbol}"/>
+        <div>
+            <label>Quantity</label>
+            <input th:field="*{quantity}"/>
+        </div>
+        <div>
+            <label >Price</label>
+            <input th:field="*{price}"/>
+        </div>
+
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>

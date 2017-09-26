@@ -15,7 +15,7 @@ public class Login {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String loginUser(Model model) {
+    public String loginUser() {
         return "home";
     }
 }
