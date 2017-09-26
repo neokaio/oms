@@ -1,0 +1,23 @@
+<html>
+<body>
+    <a th:href="@{/orders}">Orders</a>
+    <a th:href="@{/products}">Products</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Asset type</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="product : ${products}">
+                <td><a th:href="@{/order(symbol=product.symbol)}" th:text="${product.symbol}"></a></td>
+                <td th:text="${product.assetType}"></td>
+                <td th:text="${product.price}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
